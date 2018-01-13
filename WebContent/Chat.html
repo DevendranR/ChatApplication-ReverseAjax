@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type='text/javascript' src='/ChatApplication/dwr/interface/Util.js'></script>
+<script type='text/javascript' src='/ChatApplication/dwr/interface/Login.js'></script>
+<script type='text/javascript' src='/ChatApplication/dwr/interface/Chat.js'></script>
+<script type='text/javascript' src='/ChatApplication/dwr/engine.js'></script>
+<script type='text/javascript' src='/ChatApplication/dwr/util.js'></script>
+<script type='text/javascript' src='reverseAjax.js'></script>
+<link rel="stylesheet" href="style/style.css">
+</head>
+<!-- calling init() and showOnlineUsers() methods when the page loads for the first time -->
+<body onload="init();showOnlineUsers();usersName();">
+
+	<div class="chat">
+		<div id="leftcolumn">
+
+
+			<table>
+				<thead>
+					<tr>
+						<td><b>Users online</b></td>
+					</tr>
+				</thead>
+				<tbody id="usersOnline">
+				</tbody>
+			</table>
+
+
+
+		</div>
+		 <div id="welcome">Welcome <span id="userName">  </span></div>
+		<div class="logoutButton">
+			<input type="button" value="Logout" onclick="logout();return false;">
+		</div>
+		<div id="chatlog"></div>
+		<div class="fixed">
+			
+			<table>
+			<tr>
+			
+			<td>	Your Message: </td>
+			<td>	<input id="text" onkeyup="sendMessageIfEnter(event);" /></td>
+			<td>	<input type="button" value="Send" onclick="sendMessage()" /></td>
+			</tr>
+			</table>
+			
+		</div>
+
+		<script type="text/javascript">
+			getPreviousMessages();
+			Login.getUsersOnline2();
+			
+		</script>
+	</div>
+</body>
+</html>

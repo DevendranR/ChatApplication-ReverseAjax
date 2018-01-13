@@ -1,0 +1,37 @@
+
+body {
+	height: 100%;
+	background-color:#00ccff;
+	font-family:Arial;
+}
+div.fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 300px;
+	border: 1px solid black;
+}
+
+div#welcome {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+div.logoutButton {
+	position: fixed;
+	right: 0;
+	top:20px;
+}
+
+#leftcolumn {
+	position: fixed;
+	width: 200px; /*Width of left column*/
+	background: #00b7e6;
+}
+
+#chatlog {
+	padding-top: 40px;
+	margin-left: 200px;
+	padding-bottom: 20px;
+	margin-right: 0px;
+}
